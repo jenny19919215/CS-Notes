@@ -126,13 +126,13 @@ public String reverseVowels(String s) {
     while (i <= j) {
         char ci = s.charAt(i);
         char cj = s.charAt(j);
-        if (!vowels.contains(ci)) {
-            result[i++] = ci;
-        } else if (!vowels.contains(cj)) {
-            result[j--] = cj;
-        } else {
+         if(vowels.contains(ci) && vowels.contains(cj) ){
             result[i++] = cj;
             result[j--] = ci;
+        }else if(!vowels.contains(ci)){
+            result[i++] = ci;
+        }else{
+            result[j--] = cj;
         }
     }
     return new String(result);
