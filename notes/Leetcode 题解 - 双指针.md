@@ -134,7 +134,17 @@ public String reverseVowels(String s) {
             result[i++] = cj;
             result[j--] = ci;
         }
+/*** Ying same logic as above
+        if(vowels.contains(ci) && vowels.contains(cj) ){
+            result[i++] = cj;
+            result[j--] = ci;
+        }else if(!vowels.contains(ci)){
+            result[i++] = ci;
+        }else{
+            result[j--] = cj;
+        }
     }
+******Ying/
     return new String(result);
 }
 ```
